@@ -1,0 +1,101 @@
+{
+  "description": "Public source list for AI Product Radar. Official and developer sources are prioritized.",
+  "sources": [
+    {
+      "name": "Anthropic News",
+      "company": "Anthropic",
+      "region": "overseas",
+      "tier": "official",
+      "url": "https://www.anthropic.com/news",
+      "parser": "html"
+    },
+    {
+      "name": "ChatGPT Release Notes",
+      "company": "OpenAI",
+      "region": "overseas",
+      "tier": "official",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "parser": "html"
+    },
+    {
+      "name": "Google AI Updates",
+      "company": "Google",
+      "region": "overseas",
+      "tier": "official",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-march-2026/",
+      "parser": "html"
+    },
+    {
+      "name": "Perplexity Hub",
+      "company": "Perplexity",
+      "region": "overseas",
+      "tier": "official",
+      "url": "https://www.perplexity.ai/hub",
+      "parser": "html"
+    },
+    {
+      "name": "Runway Changelog",
+      "company": "Runway",
+      "region": "overseas",
+      "tier": "official",
+      "url": "https://runwayml.com/changelog",
+      "parser": "html"
+    },
+    {
+      "name": "Cursor Blog",
+      "company": "Cursor",
+      "region": "overseas",
+      "tier": "official",
+      "url": "https://cursor.com/blog",
+      "parser": "html"
+    },
+    {
+      "name": "xAI News",
+      "company": "xAI",
+      "region": "overseas",
+      "tier": "official",
+      "url": "https://x.ai/news",
+      "parser": "html"
+    },
+    {
+      "name": "ElevenLabs Changelog",
+      "company": "ElevenLabs",
+      "region": "overseas",
+      "tier": "official",
+      "url": "https://elevenlabs.io/docs/changelog",
+      "parser": "html"
+    },
+    {
+      "name": "Alibaba Cloud Press Room",
+      "company": "Alibaba Cloud",
+      "region": "china",
+      "tier": "official",
+      "url": "https://www.alibabacloud.com/press-room",
+      "parser": "html"
+    },
+    {
+      "name": "ByteDance Seed Blog",
+      "company": "ByteDance Seed",
+      "region": "china",
+      "tier": "official",
+      "url": "https://seed.bytedance.com/blog",
+      "parser": "html"
+    },
+    {
+      "name": "Baidu Investor Relations",
+      "company": "Baidu",
+      "region": "china",
+      "tier": "official",
+      "url": "https://ir.baidu.com/press-releases",
+      "parser": "html"
+    },
+    {
+      "name": "Hugging Face Blog",
+      "company": "Hugging Face",
+      "region": "overseas",
+      "tier": "official",
+      "url": "https://huggingface.co/blog",
+      "parser": "html"
+    }
+  ]
+}

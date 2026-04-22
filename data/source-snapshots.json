@@ -1,0 +1,121 @@
+{
+  "generated_at": "2026-04-20T14:30:08.331671+00:00",
+  "sources": {
+    "Anthropic News": {
+      "url": "https://www.anthropic.com/news",
+      "company": "Anthropic",
+      "region": "overseas",
+      "tier": "official",
+      "content_hash": "fc05ee91ac8ec313",
+      "changed_since_last_run": true,
+      "candidate_count": 3,
+      "checked_at": "2026-04-20T14:30:08.331671+00:00"
+    },
+    "ChatGPT Release Notes": {
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "company": "OpenAI",
+      "region": "overseas",
+      "tier": "official",
+      "content_hash": "35775f216877387b",
+      "changed_since_last_run": true,
+      "candidate_count": 4,
+      "checked_at": "2026-04-20T14:30:08.331671+00:00"
+    },
+    "Google AI Updates": {
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-march-2026/",
+      "company": "Google",
+      "region": "overseas",
+      "tier": "official",
+      "content_hash": "931dd5dc49a7768d",
+      "changed_since_last_run": true,
+      "candidate_count": 5,
+      "checked_at": "2026-04-20T14:30:08.331671+00:00"
+    },
+    "Perplexity Hub": {
+      "url": "https://www.perplexity.ai/hub",
+      "company": "Perplexity",
+      "region": "overseas",
+      "tier": "official",
+      "error": "HTTP Error 403: Forbidden",
+      "checked_at": "2026-04-20T14:30:08.331671+00:00"
+    },
+    "Runway Changelog": {
+      "url": "https://runwayml.com/changelog",
+      "company": "Runway",
+      "region": "overseas",
+      "tier": "official",
+      "content_hash": "92b1fe908cbd13cf",
+      "changed_since_last_run": true,
+      "candidate_count": 5,
+      "checked_at": "2026-04-20T14:30:08.331671+00:00"
+    },
+    "Cursor Blog": {
+      "url": "https://cursor.com/blog",
+      "company": "Cursor",
+      "region": "overseas",
+      "tier": "official",
+      "content_hash": "76113f3e04fddf3a",
+      "changed_since_last_run": true,
+      "candidate_count": 4,
+      "checked_at": "2026-04-20T14:30:08.331671+00:00"
+    },
+    "xAI News": {
+      "url": "https://x.ai/news",
+      "company": "xAI",
+      "region": "overseas",
+      "tier": "official",
+      "content_hash": "497aa67251f8d5c7",
+      "changed_since_last_run": true,
+      "candidate_count": 5,
+      "checked_at": "2026-04-20T14:30:08.331671+00:00"
+    },
+    "ElevenLabs Changelog": {
+      "url": "https://elevenlabs.io/docs/changelog",
+      "company": "ElevenLabs",
+      "region": "overseas",
+      "tier": "official",
+      "content_hash": "12fd2d1b3b852f5b",
+      "changed_since_last_run": true,
+      "candidate_count": 5,
+      "checked_at": "2026-04-20T14:30:08.331671+00:00"
+    },
+    "Alibaba Cloud Press Room": {
+      "url": "https://www.alibabacloud.com/press-room",
+      "company": "Alibaba Cloud",
+      "region": "china",
+      "tier": "official",
+      "content_hash": "12310b5f08d53b99",
+      "changed_since_last_run": true,
+      "candidate_count": 1,
+      "checked_at": "2026-04-20T14:30:08.331671+00:00"
+    },
+    "ByteDance Seed Blog": {
+      "url": "https://seed.bytedance.com/blog",
+      "company": "ByteDance Seed",
+      "region": "china",
+      "tier": "official",
+      "content_hash": "4758474a576d5993",
+      "changed_since_last_run": true,
+      "candidate_count": 0,
+      "checked_at": "2026-04-20T14:30:08.331671+00:00"
+    },
+    "Baidu Investor Relations": {
+      "url": "https://ir.baidu.com/press-releases",
+      "company": "Baidu",
+      "region": "china",
+      "tier": "official",
+      "error": "The read operation timed out",
+      "checked_at": "2026-04-20T14:30:08.331671+00:00"
+    },
+    "Hugging Face Blog": {
+      "url": "https://huggingface.co/blog",
+      "company": "Hugging Face",
+      "region": "overseas",
+      "tier": "official",
+      "content_hash": "a8cf3029f8b8e24c",
+      "changed_since_last_run": true,
+      "candidate_count": 2,
+      "checked_at": "2026-04-20T14:30:08.331671+00:00"
+    }
+  }
+}

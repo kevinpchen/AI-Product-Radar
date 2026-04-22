@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Product Radar</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="topbar" aria-label="AI product radar controls">
+        <div>
+          <p class="eyebrow">AI Product Radar</p>
+          <h1>国内外 AI 产品动态追踪</h1>
+          <p class="intro">
+            面向商业分析的 AI 产品情报流，聚焦官方发布、开发者平台、Agent、视频、语音、搜索和企业工作流。
+          </p>
+        </div>
+        <div class="update-panel">
+          <span class="panel-label">数据状态</span>
+          <strong id="generatedAt">-</strong>
+          <small id="coverageNote">-</small>
+        </div>
+      </section>
+
+      <section class="metrics-grid" aria-label="dashboard metrics">
+        <article class="metric-card">
+          <span>追踪动态</span>
+          <strong id="metricTotal">0</strong>
+          <small>近几周 / 近几个月</small>
+        </article>
+        <article class="metric-card">
+          <span>官方源占比</span>
+          <strong id="metricOfficial">0%</strong>
+          <small>优先一手动态</small>
+        </article>
+        <article class="metric-card">
+          <span>海外动态</span>
+          <strong id="metricOverseas">0%</strong>
+          <small>硅谷与海外产品优先</small>
+        </article>
+        <button class="metric-card metric-card-action" id="scoreMetricCard" type="button" aria-controls="scoreModal" aria-haspopup="dialog" aria-expanded="false">
+          <span>平均影响分</span>
+          <strong id="metricScore">0</strong>
+          <small>点击查看评分逻辑</small>
+        </button>
+      </section>
+
+      <section class="controls" aria-label="filters">
+        <label>
+          搜索
+          <input id="searchInput" type="search" placeholder="公司、产品、标签或趋势">
+        </label>
+        <label>
+          地区
+          <select id="regionFilter">
+            <option value="all">全部地区</option>
+          </select>
+        </label>
+        <label>
+          类型
+          <select id="categoryFilter">
+            <option value="all">全部类型</option>
+          </select>
+        </label>
+        <label>
+          排序
+          <select id="sortFilter">
+            <option value="score">影响分优先</option>
+            <option value="date">时间最新</option>
+            <option value="company">公司名称</option>
+          </select>
+        </label>
+        <button id="resetBtn" type="button">重置</button>
+      </section>
+
+      <section class="layout">
+        <aside class="insight-rail" aria-label="trend insights">
+          <div class="rail-block">
+            <div class="section-title">
+              <span>趋势热词</span>
+              <small>点击筛选</small>
+            </div>
+            <div id="trendChips" class="chip-list"></div>
+          </div>
+
+          <div class="rail-block">
+            <div class="section-title">
+              <span>核心观察</span>
+            </div>
+            <ul id="insightList" class="insight-list"></ul>
+          </div>
+
+          <div class="rail-block">
+            <div class="section-title">
+              <span>追踪链路</span>
+            </div>
+            <ol class="pipeline">
+              <li><strong>公开源</strong><span>官方博客、发布页、开发者文档和产品更新</span></li>
+              <li><strong>采集</strong><span>脚本检测页面变化并输出候选动态</span></li>
+              <li><strong>整理</strong><span>AI 辅助摘要、标签、去重和影响评分</span></li>
+              <li><strong>分析</strong><span>按地区、类型和商业信号沉淀判断</span></li>
+            </ol>
+          </div>
+        </aside>
+
+        <section class="feed-area" aria-label="AI product updates">
+          <div class="feed-toolbar">
+            <div>
+              <h2>动态情报流</h2>
+              <p id="resultCount">-</p>
+            </div>
+            <div class="toolbar-actions">
+              <button id="copyBriefBtn" type="button">复制简报</button>
+              <button id="exportBtn" type="button">导出 CSV</button>
+            </div>
+          </div>
+          <div id="cards" class="cards"></div>
+        </section>
+      </section>
+    </main>
+
+    <div id="scoreModal" class="modal-backdrop" hidden>
+      <section class="score-modal" role="dialog" aria-modal="true" aria-labelledby="scoreModalTitle">
+        <div class="modal-heading">
+          <div>
+            <p class="eyebrow">Impact Score</p>
+            <h2 id="scoreModalTitle">影响分如何评估</h2>
+          </div>
+          <button id="closeScoreModal" type="button" aria-label="关闭评分说明">关闭</button>
+        </div>
+        <p class="modal-copy">
+          影响分用于给动态排序，不是绝对评级。每条动态按 5 个维度做 0-100 的综合判断，页面上的平均影响分是所有动态影响分的算术平均值。
+        </p>
+        <div class="score-rubric">
+          <div><strong>来源可信度 20%</strong><span>官方发布、开发者文档和一手产品更新权重最高。</span></div>
+          <div><strong>时间新鲜度 20%</strong><span>越接近当前日期，越能代表近期产品变化。</span></div>
+          <div><strong>产品形态变化 20%</strong><span>是否带来新入口、新工作流、新 API 或新交互方式。</span></div>
+          <div><strong>商业影响 20%</strong><span>是否影响付费、企业采购、分发渠道、成本结构或生态位置。</span></div>
+          <div><strong>趋势代表性 20%</strong><span>是否体现 Agent、多模态、搜索、语音、视频、开源或 AI 硬件等关键趋势。</span></div>
+        </div>
+        <p class="modal-note">
+          例如：官方发布的 Agent 平台、企业连接器、多模态视频模型通常得分更高；单纯小功能更新或二级信息源动态会更低。
+        </p>
+      </section>
+    </div>
+
+    <script src="./data/ai-radar-data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
